@@ -1,15 +1,16 @@
-// This function clear all the values
+// menghapus semua
 function clearScreen() {
-    document.getElementById("result").value = "";
+    document.getElementById("hasil").value = "";
 }
    
-// This function display values
+// menampilkan angka atau value
 function display(value) {
-    document.getElementById("result").value += value;
+    document.getElementById("hasil").value += value;
 }
-// This function evaluates the expression and return result
+
+// hasilnya
 function calculate() {
-    var p = document.getElementById("result").value;
+    var p = document.getElementById("hasil").value;
     var q = eval(p);
-    document.getElementById("result").value = q;
+    document.getElementById("hasil").value = q;
 }
