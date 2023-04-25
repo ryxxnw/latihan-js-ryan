@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
-    margin: 0 auto;
-    padding: 0 auto;
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
     text-align: center;
 }
+
 
 .heading {
     margin: 0 auto;
@@ -101,8 +106,42 @@
     text-align: left;
 }   
 
+.table-nama {
+    margin: 0 auto;
+}
+
 .container-task2 input {
     display: inline-block;
     padding: 10px;
     margin: 5px 0 30px 0;
+    background-color: #c1c1c1;
+    color: #191b28;
 }
+
+#enterNama {
+    cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width:1000px) {
+
+}
+
+@media (max-width:670px) {
+
+    .heading {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background-color: #64278f;
+        width:300px;
+        font-size: 15px;
+    }  
+
+    .heading h1 {
+        padding: 15px;
+        color: #dcdbe1;
+    }
+    
+}
+
