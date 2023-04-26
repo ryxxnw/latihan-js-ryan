@@ -25,8 +25,24 @@ const tableNama = document.querySelector('.table-nama');
 const enterNama = document.getElementById('enterNama');
 let inputNama = document.getElementById('inputNama');
 
+const injectDeleteFunction = () => {
+    //Jika x span diclick maka parent tr nya hilang
+    const silang = document.querySelectorAll('.silang');
 
+    /* for(let i = 0; i < silang.length; i++) {
+        silang[i].addEventListener('click', function (e) {
+            e.target.parentElement.parentElement.style.display = 'none'
+        });
+    }; */
 
+    silang.forEach(function(tiapSilang) {
+        tiapSilang.addEventListener('click', function(e) {
+            e.target.parentElement.parentElement.style.display = 'none'
+        })
+    })
+}
+
+injectDeleteFunction()
 
 enterNama.addEventListener('click', function() {
     if (inputNama.value == "" ) {
@@ -46,21 +62,7 @@ enterNama.addEventListener('click', function() {
         parrentTrBaru.appendChild(tdBaru);
         tableNama.appendChild(parrentTrBaru);
         sp.classList.add('silang');
+        injectDeleteFunction()
     };
 });
 
-
-//Jika x span diclick maka parent tr nya hilang
-const silang = document.querySelectorAll('.silang');
-
-/* for(let i = 0; i < silang.length; i++) {
-    silang[i].addEventListener('click', function (e) {
-        e.target.parentElement.parentElement.style.display = 'none'
-    });
-}; */
-
-silang.forEach(function(tiapSilang) {
-    tiapSilang.addEventListener('click', function(e) {
-        e.target.parentElement.parentElement.style.display = 'none'
-    })
-})
